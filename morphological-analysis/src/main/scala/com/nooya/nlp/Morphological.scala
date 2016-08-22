@@ -1,7 +1,9 @@
-package com.kuma.nlp
-import org.atilika.kuromoji.{Tokenizer}
-import scala.collection.JavaConversions._
+package scala.com.nooya.nlp
+
 import com.typesafe.config.ConfigFactory
+import org.atilika.kuromoji.Tokenizer
+
+import scala.collection.JavaConversions._
 
 /**
   * Created by kumagaiyuuya on 8/21/16.

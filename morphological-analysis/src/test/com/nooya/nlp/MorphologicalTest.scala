@@ -1,5 +1,8 @@
-package com.kuma.nlp
+package com.nooya.nlp
+
 import org.scalatest.FlatSpec
+
+import scala.com.nooya.nlp.Morphological
 
 class MorphologicalTest extends FlatSpec {
 
