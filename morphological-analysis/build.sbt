@@ -4,5 +4,12 @@ version := "1.0"
 
 scalaVersion := "2.11.8"
 
-resolvers +="Atilika Open Source repository" at "http://www.atilika.org/nexus/content/repositories/atilika"
-libraryDependencies ++= Seq( "org.atilika.kuromoji" % "kuromoji" % "0.7.7" )
+resolvers ++=Seq("Atilika Open Source repository" at "http://www.atilika.org/nexus/content/repositories/atilika",
+  "Spark Project ML Library" at "https://mvnrepository.com/artifact/org.apache.spark/spark-mllib_2.10",
+  "Artima Maven Repository" at "http://repo.artima.com/releases")
+
+libraryDependencies ++= Seq( "org.atilika.kuromoji" % "kuromoji" % "0.7.7" ,
+  "org.apache.spark" % "spark-mllib_2.10" % "1.0.0",
+  "org.scalactic" %% "scalactic" % "3.0.0",
+  "org.scalatest" %% "scalatest" % "3.0.0" % "test"
+)
