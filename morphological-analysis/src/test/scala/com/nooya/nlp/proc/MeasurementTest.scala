@@ -21,4 +21,13 @@ class MeasurementTest extends FlatSpec{
     val tops = Measurement.nearestDocument(docTopicMatrix,singularMatirx,topicTermMatrix,sampleDocTermVector,2)
     assert((1 - (tops(0)._2)  < 0.1)&& (tops(0)._1 == 1))
   }
+
+  "nearestDocument" should "return index and score from text" in {
+    val result = Measurement.nearestDocument("C:\\Users\\kumagaiy\\Downloads\\spark_downloads\\doc_conceptVect.txt\\part-00000",
+      "C:\\Users\\kumagaiy\\Downloads\\spark_downloads\\singulartVect.txt\\part-00000",
+      "C:\\Users\\kumagaiy\\Downloads\\spark_downloads\\term_conceptVect.txt\\part-00000",
+      "みかんが食べたい",
+      5)
+    result
+  }
 }

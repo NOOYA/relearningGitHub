@@ -21,6 +21,7 @@ object MatrixV{
     // 列番号->値の順列のマップを作製
     val colValuesMap = arrays.zipWithIndex.foldLeft( Map[Int,Seq[Double]]())((m,doubles)=>{
       val seq = m.getOrElse(doubles._2%columnNum,Seq[Double]())
+      println(doubles._2)
       m + (doubles._2%columnNum -> (seq:+  doubles._1))
     }
     )
