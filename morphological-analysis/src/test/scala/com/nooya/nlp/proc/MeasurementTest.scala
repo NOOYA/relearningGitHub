@@ -26,8 +26,13 @@ class MeasurementTest extends FlatSpec{
     val result = Measurement.nearestDocument("C:\\Users\\kumagaiy\\Downloads\\spark_downloads\\doc_conceptVect.txt\\part-00000",
       "C:\\Users\\kumagaiy\\Downloads\\spark_downloads\\singulartVect.txt\\part-00000",
       "C:\\Users\\kumagaiy\\Downloads\\spark_downloads\\term_conceptVect.txt\\part-00000",
-      "みかんが食べたい",
+      "C:\\Users\\kumagaiy\\Downloads\\spark_downloads\\idfs.txt\\part-00000",
+      "" ,
       5)
-    result
+    result.foreach(x=>{
+      println(x._1+"%2.5f".format(x._2)
+      )
+    })
+
   }
 }

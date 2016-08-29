@@ -14,7 +14,7 @@ class MatrixUTest extends FlatSpec{
 
   "VectoreD" should "has Double values that equal numbers in text" in{
     val mtV:MatrixU = MatrixU("C:\\Users\\kumagaiy\\Documents\\projects\\adtech\\relearningGitHub\\morphological-analysis\\src\\test\\resources\\MatrixU.txt")
-     println(mtV.coreMatrix)
+     // println(mtV.coreMatrix)
       assert(mtV.coreMatrix( 0,0) ==0.0036065457971923395)
       assert(mtV.coreMatrix( 1,0) ==0.025722233743874928)
       assert(mtV.coreMatrix( 2,0) ==0.004413422489782506)

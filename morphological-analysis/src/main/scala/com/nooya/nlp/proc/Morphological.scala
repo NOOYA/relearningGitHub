@@ -45,7 +45,7 @@ object Morphological {
       (m + (t -> (m.getOrElse(t,0.0) +1.0) / terms.size.toDouble ))
     })
     val termId = TermID("C:\\Users\\kumagaiy\\Downloads\\spark_downloads\\termIdsRdd.txt\\part-00000")
-     DenseVector(
+    val df = DenseVector(
       termId.iDTermMap.toSeq.sortBy(x=>x._1).foldLeft(Seq[Double]())((s,tm)=>{
        val score = temFreq.getOrElse(tm._2, 0.0)
         if(score!=0.0){
@@ -53,5 +53,6 @@ object Morphological {
         }
       s :+ (score)
     }).toArray)
+    df
   }
 }

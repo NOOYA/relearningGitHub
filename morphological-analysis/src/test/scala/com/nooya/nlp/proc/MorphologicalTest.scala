@@ -13,7 +13,7 @@ class MorphologicalTest extends FlatSpec {
 
   "createVector" should "createVector from string" in{
     val vect = Morphological.createDocumentVector("usbの書き込み権限付与の申請方法について知りたい。")
-    vect.foreach(println)
+    //vect.foreach(println)
     assert(vect.activeSize == 1000)
   }
 }
